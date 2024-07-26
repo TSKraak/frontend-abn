@@ -1,0 +1,28 @@
+.tree-node {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    margin: 25px;
+
+    &__name {
+      display: block;
+      width: 100px;
+      border: solid 1px grey;
+      padding: 10px;
+
+      &:hover,
+      :active {
+        cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        background-color: lightgrey;
+      }
+
+      &--selected {
+        background-color: lightgrey;
+      }
+    }
+  }
+}
