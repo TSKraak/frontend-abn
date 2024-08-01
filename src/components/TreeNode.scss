@@ -1,16 +1,21 @@
 .tree-node {
+  position: relative;
+
   &__list {
     list-style-type: none;
+    padding-left: 20px;
   }
 
   &__item {
     margin: 25px;
+    position: relative;
 
     &__name {
       display: block;
       width: 100px;
-      border: solid 1px grey;
+      border: solid 2px black;
       padding: 10px;
+      position: relative;
 
       &:hover,
       :active {
@@ -22,6 +27,20 @@
 
       &--selected {
         background-color: lightgrey;
+      }
+
+      &__line {
+        position: absolute;
+        background-color: grey;
+        pointer-events: none;
+
+        &--vertical {
+          width: 0.5px;
+        }
+
+        &--horizontal {
+          height: 0.5px;
+        }
       }
     }
   }
